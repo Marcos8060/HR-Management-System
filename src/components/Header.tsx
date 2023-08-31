@@ -57,14 +57,12 @@ const Header = ({ collapsed }: props) => {
             />
             <Drawer {...{ isOpen, setIsOpen, collapsed }} />
           </div>
-          <Button onClick={handleClick}>
-            <img
-              className="w-10 h-10 rounded-full cursor-pointer"
-              src="/images/me.png"
-              alt=""
-            />
-          </Button>
-
+          <img
+            onClick={handleClick}
+            className="w-10 h-10 rounded-full cursor-pointer"
+            src="/images/me.png"
+            alt=""
+          />
           <Menu
             id="basic-menu"
             anchorEl={anchorEl}
