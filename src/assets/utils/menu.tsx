@@ -131,7 +131,7 @@ export const dashboardData = [
   {
     label: 'Projects',
     number: 12,
-    icon: <HomeIcon className="w-8 h-8" />
+    icon: <HomeIcon className="w-6 h-8" />
   },
   {
     label: 'Clients',
@@ -141,11 +141,11 @@ export const dashboardData = [
   {
     label: 'Tasks',
     number: 37,
-    icon: <HomeIcon className="w-8 h-8" />
+    icon: <HomeIcon className="w-6 h-8" />
   },
   {
     label: 'Employees',
     number: 218,
-    icon: <HomeIcon className="w-8 h-8" />
+    icon: <HomeIcon className="w-6 h-8" />
   }
 ]

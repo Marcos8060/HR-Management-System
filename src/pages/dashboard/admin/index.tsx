@@ -21,8 +21,14 @@ const Admin = () => {
           </Grid>
         ))}
       </Grid>
-
-      <RevenueChart />
+      <Grid container spacing={2}>
+        <Grid item md={6} xs={12}>
+          <RevenueChart />
+        </Grid>
+        <Grid item md={6} xs={12}>
+          <RevenueChart />
+        </Grid>
+      </Grid>
     </Container>
   );
 };
