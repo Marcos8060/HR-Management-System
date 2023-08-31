@@ -3,6 +3,7 @@ import React from "react";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import { dashboardData } from "@/assets/utils/menu";
 import RevenueChart from "./charts/revenue-chart";
+import SalesChart from "./charts/sales-chart";
 
 const Admin = () => {
   return (
@@ -26,7 +27,7 @@ const Admin = () => {
           <RevenueChart />
         </Grid>
         <Grid item md={6} xs={12}>
-          <RevenueChart />
+          <SalesChart />
         </Grid>
       </Grid>
     </Container>
