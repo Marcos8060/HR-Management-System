@@ -4,6 +4,7 @@ import { HomeIcon } from "@heroicons/react/24/outline";
 import { dashboardData } from "@/assets/utils/menu";
 import RevenueChart from "./charts/revenue-chart";
 import SalesChart from "./charts/sales-chart";
+import Statistics from "./statistics";
 
 const Admin = () => {
   return (
@@ -30,6 +31,7 @@ const Admin = () => {
           <SalesChart />
         </Grid>
       </Grid>
+      <Statistics />
     </Container>
   );
 };

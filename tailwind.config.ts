@@ -12,7 +12,8 @@ const config: Config = {
       white: '#FFFFFF',
       hover: '#2C5BCD',
       black: '#000000',
-      yellow: '#FFD831'
+      yellow: '#FFD831',
+      surface: '#DFEAF0'
     }
   },
   plugins: [],
