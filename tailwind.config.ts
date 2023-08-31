@@ -8,10 +8,11 @@ const config: Config = {
   ],
   theme: {
     colors:{
-      primary: '#272684',
+      primary: '#1C212D',
       white: '#FFFFFF',
       hover: '#2C5BCD',
       black: '#000000',
+      yellow: '#FFD831'
     }
   },
   plugins: [],

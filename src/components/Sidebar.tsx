@@ -13,11 +13,11 @@ const Sidebar = ({ collapsed, setCollapsed }: Props) => {
   return (
     <>
       <section className="bg-primary h-screen text-white px-3">
-        <div className="h-16 flex items-center justify-between border-b border-hover">
+        <div className="h-16 flex items-center justify-between border-b border-yellow">
           {!collapsed && <img className="w-12" src="/images/me.png" alt="" />}
           <button
             onClick={() => setCollapsed(!collapsed)}
-            className="pl-2 hover:bg-hover p-1 rounded-full w-10 h-10 flex place-items-center justify-center"
+            className="pl-2 hover:bg-yellow hover:text-black p-1 rounded-full w-10 h-10 flex place-items-center justify-center"
           >
             {collapsed ? (
               <BsChevronDoubleRight className="text-xl" />

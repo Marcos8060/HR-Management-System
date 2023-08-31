@@ -7,35 +7,51 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
 
-
 const menus = [
   {
     label: "Dashboard",
     href: "/",
     icon: <HomeIcon className="w-6 h-6" />,
+    children: [
+      {
+        label: "Admin Dashboard",
+        href: "/dashboard/admin",
+        icon: <UserGroupIcon className="w-6 h-6" />,
+      },
+      {
+        label: "Employee Dashboard",
+        href: "/dashboard/employee",
+        icon: <UserGroupIcon className="w-6 h-6" />,
+      },
+    ],
   },
   {
-    label: "Statistics",
-    href: "/statistics",
-    icon: <HomeIcon className="w-6 h-6" />,
-  },
-  {
-    label: "Sector",
+    label: "Employees",
     href: "/sector",
     icon: <UserGroupIcon className="w-6 h-6" />,
     children: [
       {
-        label: "Fintech",
+        label: "All Employees",
         href: "/dashboard/sector/fintech",
         icon: <UserGroupIcon className="w-6 h-6" />,
       },
       {
-        label: "Health",
+        label: "Holidays",
         href: "/dashboard/sector/health",
         icon: <UserGroupIcon className="w-6 h-6" />,
       },
       {
-        label: "Agriculture",
+        label: "Leaves (Admin)",
+        href: "/dashboard/sector/health",
+        icon: <UserGroupIcon className="w-6 h-6" />,
+      },
+      {
+        label: "Leaves (Employee)",
+        href: "/dashboard/sector/health",
+        icon: <UserGroupIcon className="w-6 h-6" />,
+      },
+      {
+        label: "Departments",
         href: "/dashboard/sector/agriculture",
         icon: <UserGroupIcon className="w-6 h-6" />,
       },
@@ -61,7 +77,7 @@ const menus = [
         href: "/dashboard/users/approved-users",
         icon: <UserGroupIcon className="w-6 h-6" />,
       },
-    ]
+    ],
   },
   {
     label: "Calendar",
@@ -69,6 +85,5 @@ const menus = [
     icon: <CalendarIcon className="w-6 h-6" />,
   },
 ];
-
 
 export default menus;

@@ -28,7 +28,7 @@ type MenuItem = {
                   <>
                     <span
                       onClick={()=> setShowChild((prev) => !prev)}
-                      className="flex text-sm items-center justify-between hover:bg-[#2C5BCD] rounded py-2 px-2 cursor-pointer"
+                      className="flex text-sm items-center justify-between hover:bg-yellow hover:text-black rounded py-2 px-2 cursor-pointer"
                     >
                       <div className="flex items-center gap-2">
                         <span className="w-6">{menu.icon}</span>{" "}
@@ -42,7 +42,7 @@ type MenuItem = {
                 ) : (
                   <>
                     <Link
-                      className="flex text-sm items-center gap-2 hover:bg-[#2C5BCD] rounded py-2 px-2"
+                      className="flex text-sm items-center gap-2 hover:bg-yellow hover:text-black rounded py-2 px-2"
                       href={menu.href}
                     >
                       <span className="w-6">{menu.icon}</span>{" "}
@@ -55,10 +55,10 @@ type MenuItem = {
                     {menu?.children?.map((child, index) => (
                       <li key={index} className="px-8 text-sm">
                         <Link
-                          className="flex items-center gap-2 hover:bg-[#2C5BCD] rounded py-2 px-2"
+                          className="flex items-center gap-2 hover:bg-yellow hover:text-black rounded py-2 px-2"
                           href={child.href}
                         >
-                          <span className="w-6">{child.icon}</span>{" "}
+                          {/* <span className="w-6">{child.icon}</span>{" "} */}
                           <span>{!collapsed && child.label}</span>
                         </Link>
                       </li>
