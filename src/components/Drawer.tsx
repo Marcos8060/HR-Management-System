@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
 import { MenuChild } from "./MenuChild";
-import menus from "@/assets/utils/menu";
+import { menus } from "@/assets/utils/menu";
 
 type Props = {
   collapsed: boolean,

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsChevronDoubleLeft, BsChevronDoubleRight } from "react-icons/bs";
 import { MenuChild } from "./MenuChild";
-import menus from "@/assets/utils/menu";
+import {menus} from "@/assets/utils/menu";
 
 type Props = {
   collapsed: boolean;

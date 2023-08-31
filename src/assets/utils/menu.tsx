@@ -8,7 +8,8 @@ import {
   UserIcon
 } from "@heroicons/react/24/outline";
 
-const menus = [
+
+export const menus = [
   {
     label: "Dashboard",
     href: "/",
@@ -124,4 +125,27 @@ const menus = [
   },
 ];
 
-export default menus;
+
+
+export const dashboardData = [
+  {
+    label: 'Projects',
+    number: 12,
+    icon: <HomeIcon className="w-8 h-8" />
+  },
+  {
+    label: 'Clients',
+    number: 44,
+    icon: <HomeIcon className="w-6 h-8" />
+  },
+  {
+    label: 'Tasks',
+    number: 37,
+    icon: <HomeIcon className="w-8 h-8" />
+  },
+  {
+    label: 'Employees',
+    number: 218,
+    icon: <HomeIcon className="w-8 h-8" />
+  }
+]

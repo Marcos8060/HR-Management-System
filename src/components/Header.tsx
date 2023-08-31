@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Drawer } from "./Drawer";
-import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
