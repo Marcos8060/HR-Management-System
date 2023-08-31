@@ -44,13 +44,13 @@ const Statistics = () => {
               4
             </span>
           </h1>
-          <section className="flex gap-2 items-center">
-            <section className="border rounded p-2 my-4 w-1/2">
+          <section className="md:flex gap-2 items-center">
+            <section className="border rounded p-2 my-4 md:w-1/2 w-full">
               <div className="flex items-center gap-4">
                 <HiUserCircle className="text-4xl" />
                 <span>Martin Lewis</span>
               </div>
-              <div className="flex items-center gap-4 my-2">
+              <div className="flex items-center justify-between gap-4 my-2">
                 <div>
                   <p className="text-sm">4th Sep 2019</p>
                   <p className="text-sm">Leave Date</p>
@@ -62,12 +62,12 @@ const Statistics = () => {
                 </div>
               </div>
             </section>
-            <section className="border rounded p-2 my-4 w-1/2">
+            <section className="border rounded p-2 my-4 md:w-1/2 w-full">
               <div className="flex items-center gap-4">
                 <HiUserCircle className="text-4xl" />
                 <span>Martin Lewis</span>
               </div>
-              <div className="flex items-center gap-4 my-2">
+              <div className="flex items-center justify-between gap-4 my-2">
                 <div>
                   <p className="text-sm">4th Sep 2019</p>
                   <p className="text-sm">Leave Date</p>
