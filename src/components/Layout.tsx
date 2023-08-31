@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className="flex h-screen overflow-hidden">
       <div
         className={`${
-          collapsed ? "w-16" : "w-2/12"
+          collapsed ? "w-16" : "w-72"
         } h-screen bg-gray-100 md:block hidden`}
       >
         <Sidebar

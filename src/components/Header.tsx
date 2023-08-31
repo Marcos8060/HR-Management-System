@@ -45,7 +45,7 @@ const Header = ({ collapsed }: props) => {
     <>
       <section className="flex justify-between sm:px-8 px-2 py-4 sticky top-0 z-50 shadow-xl ">
         <div className="">
-          <h1 className="text-xl">Human Resource Management System</h1>
+          <h1 className="text-xl">HR Management System</h1>
         </div>
 
         <div className="flex items-center gap-4">

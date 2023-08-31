@@ -2,6 +2,7 @@ import { Grid, Container } from "@mui/material";
 import React from "react";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import { dashboardData } from "@/assets/utils/menu";
+import RevenueChart from "./charts/revenue-chart";
 
 const Admin = () => {
   return (
@@ -11,9 +12,7 @@ const Admin = () => {
         {dashboardData.map((data, index) => (
           <Grid item md={3} xs={12} key={index}>
             <section className="bg-white shadow-xl rounded flex items-center justify-between py-2 px-4 h-28">
-              <div>
-                {data.icon}
-              </div>
+              <div>{data.icon}</div>
               <div className="text-center text-xl">
                 <p className="font-semibold">{data.number}</p>
                 <p>{data.label}</p>
@@ -22,6 +21,8 @@ const Admin = () => {
           </Grid>
         ))}
       </Grid>
+
+      <RevenueChart />
     </Container>
   );
 };
