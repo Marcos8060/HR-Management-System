@@ -8,7 +8,7 @@ import jwtDecode from "jwt-decode";
 
 export const authContext = useContext()
 
-const AuthProvider = ({ children}) =>{
+export const AuthProvider = ({ children}) =>{
     const router = useRouter();
     const [authToken,setAuthToken] = useState(() => typeof window !== 'undefined' && localStorage.getItem('token') ? JSON.parse(localStorage.getItem('token')) : null)
     const [user,setUser] = useState(() => typeof window !== 'undefined' && localStorage.getItem('token') ? localStorage.getItem('token') : null)
@@ -34,7 +34,7 @@ const AuthProvider = ({ children}) =>{
         }  
     }
 
-    
+
     // logout User
     const logoutUser = () =>{
         setAuthToken(null);
@@ -47,8 +47,10 @@ const AuthProvider = ({ children}) =>{
     let contextData = {
         loginUser: loginUser,
         message: message,
-        logoutUser: logoutUser
+        logoutUser: logoutUser,
+        user:user
     }
+    
     return (
         <authContext.Provider value={contextData}>
             {children}

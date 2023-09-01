@@ -1,10 +1,12 @@
-import React from "react";
+import React,{useContext} from "react";
 import { TextField } from "@mui/material";
 import Link from "next/link";
 import * as yup from "yup";
 import { useFormik } from "formik";
+import { authContext } from "./context";
 
 const Login = () => {
+  const { loginUser } = useContext(authContext);
   const validationSchema = yup.object({
     username: yup.string().required("Username is required"),
     password: yup.string().required("Password is required"),
