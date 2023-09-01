@@ -6,9 +6,9 @@ import '../styles/devextreme.css';
 
 
 export default function App({ Component, pageProps }: AppProps) {
+  const getLayout = (Component as any).getLayout ?? ((page:any) => page)
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+      getLayout(<Component {...pageProps} />)
   );
 }

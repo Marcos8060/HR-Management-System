@@ -5,6 +5,7 @@ import RevenueChart from "./charts/revenue-chart";
 import SalesChart from "./charts/sales-chart";
 import Statistics from "./statistics";
 import Tables from "./tables";
+import Layout from "@/components/Layout";
 
 const Admin = () => {
   return (
@@ -36,5 +37,7 @@ const Admin = () => {
     </Container>
   );
 };
+
+Admin.getLayout = (page: React.ReactNode) => <Layout>{page}</Layout>;
 
 export default Admin;
