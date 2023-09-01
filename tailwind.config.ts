@@ -13,7 +13,8 @@ const config: Config = {
       hover: '#2C5BCD',
       black: '#000000',
       yellow: '#FFD831',
-      surface: '#DFEAF0'
+      surface: '#DFEAF0',
+      link: '#0D6EFD'
     }
   },
   plugins: [],
