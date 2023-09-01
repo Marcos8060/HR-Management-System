@@ -2,6 +2,7 @@ import { useState,useContext } from "react";
 import { APP_API_URL } from "@/utils/axiosInstance/api-endpoints";
 import { useRouter } from "next/router";
 import axios from 'axios'
+import jwtDecode from "jwt-decode";
 
 
 
@@ -14,6 +15,7 @@ const AuthProvider = ({ children}) =>{
     const [message,setMessage] = useState('');
 
 
+    // login User
     const loginUser = async(username,password)=>{
         try {
             const response = await axios.post(APP_API_URL,{
@@ -23,17 +25,29 @@ const AuthProvider = ({ children}) =>{
             if(response.status === 200){
                 const data = response.data;
                 setAuthToken(data);
-                setUser(data);
+                setUser(jwtDecode(data.access));
+                localStorage.setItem('token',JSON.stringify(data));
                 router.push('/')
             }
         } catch (error) {
-            setMessage(error)
+            setMessage(error.response.data.detail)
         }  
     }
 
+    
+    // logout User
+    const logoutUser = () =>{
+        setAuthToken(null);
+        setUser(null);
+        localStorage.removeItem('token');
+        router.push('/login');
+    }
+
+
     let contextData = {
-        loginUser: '',
-        logOutUser: '',
+        loginUser: loginUser,
+        message: message,
+        logoutUser: logoutUser
     }
     return (
         <authContext.Provider value={contextData}>
