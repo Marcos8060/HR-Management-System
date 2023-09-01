@@ -25,7 +25,7 @@ const Login = () => {
   });
   return (
     <section className="bg-surface h-screen flex items-center justify-center">
-      <section className="bg-white shadow-xl w-4/12 mx-auto rounded p-4 space-y-8">
+      <section className="bg-white shadow-2xl w-4/12 mx-auto rounded p-4 space-y-8">
         <div>
           <h1 className="text-center text-xl">Login</h1>
           <p className="text-center">Access to our dashboard</p>
