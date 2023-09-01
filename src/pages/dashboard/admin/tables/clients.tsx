@@ -59,7 +59,7 @@ const Clients = () => {
         />
         <Toolbar>
           <Item location="before">
-            <p className="text-xl">Clients</p>
+            <p className="text-xl font-semibold">Clients</p>
           </Item>
         </Toolbar>
       </DataGrid>

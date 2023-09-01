@@ -49,7 +49,7 @@ const Projects = () => {
         />
         <Toolbar>
           <Item location="before">
-            <p className="text-xl">Recent Projects</p>
+            <p className="text-xl font-semibold">Recent Projects</p>
           </Item>
         </Toolbar>
       </DataGrid>
