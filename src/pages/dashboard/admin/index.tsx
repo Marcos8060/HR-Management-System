@@ -1,10 +1,10 @@
 import { Grid, Container } from "@mui/material";
 import React from "react";
-import { HomeIcon } from "@heroicons/react/24/outline";
 import { dashboardData } from "@/assets/utils/menu";
 import RevenueChart from "./charts/revenue-chart";
 import SalesChart from "./charts/sales-chart";
 import Statistics from "./statistics";
+import Tables from "./tables";
 
 const Admin = () => {
   return (
@@ -32,6 +32,7 @@ const Admin = () => {
         </Grid>
       </Grid>
       <Statistics />
+      <Tables />
     </Container>
   );
 };
