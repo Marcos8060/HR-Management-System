@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineDown,AiOutlineUp } from "react-icons/ai";
 import { Drawer } from "./Drawer";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -56,12 +56,15 @@ const Header = ({ collapsed }: props) => {
             />
             <Drawer {...{ isOpen, setIsOpen, collapsed }} />
           </div>
-          <img
-            onClick={handleClick}
-            className="w-10 h-10 rounded-full cursor-pointer"
-            src="/images/me.png"
-            alt=""
-          />
+          <div className="flex items-center gap-4">
+            <img
+              className="w-10 h-10 rounded-full cursor-pointer"
+              src="/images/me.png"
+              alt=""
+            />
+            <p>Marcos</p>
+            <AiOutlineDown className="cursor-pointer" onClick={handleClick} />
+          </div>
           <Menu
             id="basic-menu"
             anchorEl={anchorEl}
