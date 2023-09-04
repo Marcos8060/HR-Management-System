@@ -14,7 +14,7 @@ const Header = ({ collapsed }: props) => {
   const [navBackground, setNavBackground] = useState(false);
   const [show, setShow] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const { user } = useContext(authContext);
+  const { user,logoutUser } = useContext(authContext);
 
   console.log("CONTEXT_USER ",user);
   const open = Boolean(anchorEl);
@@ -80,7 +80,7 @@ const Header = ({ collapsed }: props) => {
           >
             <MenuItem onClick={handleClose}>Profile</MenuItem>
             <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            <MenuItem onClick={logoutUser}>Logout</MenuItem>
           </Menu>
         </div>
       </section>
