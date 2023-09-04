@@ -18,11 +18,9 @@ export const config = {
 export default async function handler(req, res) {
     if (req.method === API_METHODS.POST) {
         const body = req.body;
-        console.log("LOGIN_BODY ",body);
         if (body?.data !== undefined) {
             try {
                 const formData = secretKey.decrypt(body.data);
-                console.log("DECRYPTED_FORM_DATA ",formData);
 
                 // USE THIS IF REQUIRED AS A PARAMS
                 // const config = {

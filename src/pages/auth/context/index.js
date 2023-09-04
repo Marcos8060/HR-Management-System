@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 import SimpleCrypto from "simple-crypto-js";
+import { toast } from 'react-toastify'
 
 export const authContext = createContext();
 
@@ -42,6 +43,7 @@ export const AuthProvider = ({ children }) => {
     } catch (error) {
       console.log("LOGIN_CONTEXT_ERROR ", error);
       setMessage(error.response.data.detail);
+      toast.error(message);
     }
   };
 
