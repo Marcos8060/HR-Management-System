@@ -20,14 +20,16 @@ const Login = () => {
     validationSchema: validationSchema,
     onSubmit: async (values, helpers) => {
       try {
-        // await loginUser(values.username,values.password);
+        await loginUser(values.username,values.password);
         helpers.resetForm();
-      } catch (error) {}
+      } catch (error) {
+        console.log("LOGIN_ERROR ",error);
+      }
     },
   });
   return (
-    <section className="bg-surface h-screen flex items-center justify-center">
-      <section className="bg-white shadow-2xl w-4/12 mx-auto rounded p-4 space-y-8">
+    <section className="bg-surface h-screen flex items-center justify-center px-4">
+      <section className="bg-white shadow-2xl md:w-4/12 w-full mx-auto rounded p-4 space-y-8">
         <div>
           <h1 className="text-center text-xl">Login</h1>
           <p className="text-center">Access to our dashboard</p>

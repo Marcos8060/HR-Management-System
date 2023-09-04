@@ -1,8 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect,useContext } from "react";
 import { AiOutlineMenu, AiOutlineDown,AiOutlineUp } from "react-icons/ai";
 import { Drawer } from "./Drawer";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { authContext } from "@/pages/auth/context";
 
 type props = {
   collapsed: boolean;
@@ -13,6 +14,9 @@ const Header = ({ collapsed }: props) => {
   const [navBackground, setNavBackground] = useState(false);
   const [show, setShow] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const { user } = useContext(authContext);
+
+  console.log("CONTEXT_USER ",user);
   const open = Boolean(anchorEl);
 
   const handleClick = (
@@ -62,7 +66,7 @@ const Header = ({ collapsed }: props) => {
               src="/images/me.png"
               alt=""
             />
-            <p>Marcos</p>
+            <p>{user?.username}</p>
             <AiOutlineDown className="cursor-pointer" onClick={handleClick} />
           </div>
           <Menu

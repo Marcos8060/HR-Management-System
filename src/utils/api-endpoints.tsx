@@ -4,8 +4,8 @@ export const API_URL = {
 
     /***************** AUTHENTICATION APIS **********************/
     // LOGIN: '/api/v1/sponsorauth/login',
-    LOGIN: '/token/',
-    REFRESH_TOKEN: '/api/refresh',
+    LOGIN: '/api/token/',
+    REFRESH_TOKEN: '/api/token/refresh/',
     GET_USER_MENUS: '/api/Account/getMenu',
     VALIDATE_OTP: '/api/Account/ValidateOpt',
 
@@ -17,7 +17,7 @@ export const APP_API_URL = {
 
     /***************** AUTH **********************/
     LOGIN: '/api/login',
-    REFRESH_TOKEN: '/api/admin/refresh-token',
+    REFRESH_TOKEN: '/api/token/refresh/',
    
 
 }
