@@ -80,7 +80,7 @@ export const menus = [
         icon: <UserGroupIcon className="w-6 h-6" />,
       },
       {
-        label: "Rejected Projects",
+        label: "Pending Projects",
         href: "/dashboard/users/approved-users",
         icon: <UserGroupIcon className="w-6 h-6" />,
       },
