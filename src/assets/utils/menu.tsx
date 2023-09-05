@@ -71,7 +71,7 @@ export const menus = [
     children: [
       {
         label: "All Projects",
-        href: "/dashboard/users/all-users",
+        href: "/dashboard/projects",
         icon: <UserGroupIcon className="w-6 h-6" />,
       },
       {
