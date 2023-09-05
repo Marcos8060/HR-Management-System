@@ -5,7 +5,8 @@ import { Container } from "@mui/material";
 
 const Projects = () => {
   return (
-    <Container maxWidth="xl" className="py-4 h-[90vh]">
+    <Container maxWidth="xl" className="py-4 h-[88vh]">
+      <h1 className="text-2xl font-semibold my-4">All Projects</h1>
       <ProjectsDataGrid />
     </Container>
   );
