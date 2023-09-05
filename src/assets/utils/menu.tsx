@@ -76,7 +76,7 @@ export const menus = [
       },
       {
         label: "Approved Projects",
-        href: "/dashboard/users/approved-users",
+        href: "/dashboard/projects/approved-projects",
         icon: <UserGroupIcon className="w-6 h-6" />,
       },
       {
