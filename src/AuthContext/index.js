@@ -5,12 +5,16 @@ import axios from "axios";
 import jwtDecode from "jwt-decode";
 import SimpleCrypto from "simple-crypto-js";
 import { toast } from 'react-toastify'
+import { useDispatch } from 'react-redux'
+import { getAllUserPermissions } from "@/redux/features/auth";
+
 
 export const authContext = createContext();
 
 const secretKey = new SimpleCrypto(process.env.NEXT_PUBLIC_ENCRYPTION_KEY);
 
 export const AuthProvider = ({ children }) => {
+  const dispatch = useDispatch();
   const router = useRouter();
   const [authToken, setAuthToken] = useState(() =>
     typeof window !== "undefined" && localStorage.getItem("token")
@@ -36,9 +40,16 @@ export const AuthProvider = ({ children }) => {
         const data = secretKey.decrypt(response.data);
         setAuthToken(data);
         const decodedUser = jwtDecode(data.access);
+        console.log("DECODED_USER_DETAILS ",decodedUser);
         setUser(decodedUser);
-        localStorage.setItem("token", JSON.stringify(data));
-        router.push("/dashboard/admin");
+        try {
+          const res = await dispatch(getAllUserPermissions(decodedUser?.user_id));
+          console.log("PERMISSIONS RESPONSE ",res);
+          router.push("/dashboard/admin");
+          localStorage.setItem("token", JSON.stringify(data));
+        } catch (error) {
+          console.log("PERMISSIONS ERROR ",error);
+        }
       }
     } catch (error) {
       console.log("LOGIN_CONTEXT_ERROR ", error);

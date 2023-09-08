@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/AuthContext/index.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/AuthContext/index.js", "src/pages/api/login/user-permissions.js", "src/redux/services/auth/index.js"],
   "exclude": ["node_modules"]
 }

@@ -5,6 +5,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { authContext } from "@/AuthContext";
 
+
 type props = {
   collapsed: boolean;
 };
@@ -16,7 +17,6 @@ const Header = ({ collapsed }: props) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const { user,logoutUser } = useContext(authContext);
 
-  console.log("CONTEXT_USER ",user);
   const open = Boolean(anchorEl);
 
   const handleClick = (

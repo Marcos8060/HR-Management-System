@@ -7,16 +7,20 @@ import { theme } from "../styles/theme";
 import { AuthProvider } from "../AuthContext";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { Provider } from "react-redux";
+import { store } from "@/redux/store";
 
 export default function App({ Component, pageProps }: AppProps) {
   const getLayout = (Component as any).getLayout ?? ((page: any) => page);
 
   return (
-    <AuthProvider>
-      <ThemeProvider theme={theme}>
-        <ToastContainer />
-        {getLayout(<Component {...pageProps} />)}
-      </ThemeProvider>
-    </AuthProvider>
+    <Provider store={store}>
+      <AuthProvider>
+        <ThemeProvider theme={theme}>
+          <ToastContainer />
+          {getLayout(<Component {...pageProps} />)}
+        </ThemeProvider>
+      </AuthProvider>
+    </Provider>
   );
 }
