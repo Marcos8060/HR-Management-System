@@ -3,7 +3,7 @@ import { TextField } from "@mui/material";
 import Link from "next/link";
 import * as yup from "yup";
 import { useFormik } from "formik";
-import { authContext } from "./context";
+import { authContext } from ".";
 import Alert from '@mui/material/Alert';
 
 

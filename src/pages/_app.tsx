@@ -4,7 +4,7 @@ import "devextreme/dist/css/dx.material.blue.light.css";
 import "../styles/devextreme.css";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../styles/theme";
-import { AuthProvider } from "./auth/context";
+import { AuthProvider } from "../AuthContext";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
