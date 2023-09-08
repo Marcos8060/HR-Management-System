@@ -7,7 +7,6 @@ import {
   UserGroupIcon,
   UserIcon
 } from "@heroicons/react/24/outline";
-import { PERMISSIONS } from "./permissions";
 
 
 export const menus = [
@@ -20,13 +19,13 @@ export const menus = [
         label: "Admin Dashboard",
         href: "/dashboard/admin",
         icon: <UserGroupIcon className="w-6 h-6" />,
-        permission: PERMISSIONS.DASHBOARD.ACCESS
+        permission: 'ACCESS_ADMIN_DASHBOARD'
       },
       {
         label: "Employee Dashboard",
         href: "/dashboard/employee",
         icon: <UserGroupIcon className="w-6 h-6" />,
-        permission: PERMISSIONS.DASHBOARD.ACCESS
+        permission: 'ACCESS_EMPLOYEE_DASHBOARD'
       },
     ],
   },
@@ -39,13 +38,12 @@ export const menus = [
         label: "All Employees",
         href: "/dashboard/sector/fintech",
         icon: <UserGroupIcon className="w-6 h-6" />,
-        permission: PERMISSIONS.EMPLOYEES.ACCESS
+        permission: 'ACCESS_EMPLOYEES'
       },
       {
         label: "Holidays",
         href: "/dashboard/sector/health",
         icon: <UserGroupIcon className="w-6 h-6" />,
-        permission: PERMISSIONS.EMPLOYEES.ACCESS
       },
       {
         label: "Leaves (Admin)",
@@ -56,14 +54,12 @@ export const menus = [
         label: "Leaves (Employee)",
         href: "/dashboard/sector/health",
         icon: <UserGroupIcon className="w-6 h-6" />,
-        permission: PERMISSIONS.EMPLOYEES.ACCESS
 
       },
       {
         label: "Departments",
         href: "/dashboard/sector/agriculture",
         icon: <UserGroupIcon className="w-6 h-6" />,
-        permission: PERMISSIONS.EMPLOYEES.ACCESS
       },
     ],
   },
@@ -71,7 +67,7 @@ export const menus = [
     label: "Clients",
     href: "/calendar",
     icon: <UserGroupIcon className="w-6 h-6" />,
-    permission: PERMISSIONS.CLIENTS.ACCESS
+    permission: 'ACCESS_CLIENTS'
   },
   {
     label: "Projects",
@@ -82,19 +78,16 @@ export const menus = [
         label: "All Projects",
         href: "/dashboard/projects",
         icon: <UserGroupIcon className="w-6 h-6" />,
-        permission: PERMISSIONS.PROJECTS.ACCESS
       },
       {
         label: "Approved Projects",
         href: "/dashboard/projects/approved-projects",
         icon: <UserGroupIcon className="w-6 h-6" />,
-        permission: PERMISSIONS.PROJECTS.ACCESS
       },
       {
         label: "Pending Projects",
         href: "/dashboard/users/approved-users",
         icon: <UserGroupIcon className="w-6 h-6" />,
-        permission: PERMISSIONS.PROJECTS.ACCESS
       },
     ],
   },
@@ -102,7 +95,6 @@ export const menus = [
     label: "Calendar",
     href: "/calendar",
     icon: <CalendarIcon className="w-6 h-6" />,
-    permission: PERMISSIONS.PROJECTS.ACCESS
   },
 ];
 
