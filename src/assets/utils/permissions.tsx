@@ -11,6 +11,14 @@ export const PERMISSIONS = {
       DELETE: 'Permissions.Employees.Delete',
       SEARCH: 'Permissions.Employees.Search',
     },
+    CLIENTS: {
+      ACCESS: 'Permissions.Clients.Access',
+      VIEW: 'Permissions.Clients.View',
+      CREATE: 'Permissions.Clients.Create',
+      UPDATE: 'Permissions.Clients.Update',
+      DELETE: 'Permissions.Clients.Delete',
+      SEARCH: 'Permissions.Clients.Search',
+    },
     PROJECTS: {
       ACCESS: 'Permissions.Projects.Access',
       VIEW: 'Permissions.Projects.View',
@@ -18,6 +26,14 @@ export const PERMISSIONS = {
       UPDATE: 'Permissions.Projects.Update',
       DELETE: 'Permissions.Projects.Delete',
       SEARCH: 'Permissions.Projects.Search',
+    },
+    CALENDER: {
+      ACCESS: 'Permissions.Calender.Access',
+      VIEW: 'Permissions.Calender.View',
+      CREATE: 'Permissions.Calender.Create',
+      UPDATE: 'Permissions.Calender.Update',
+      DELETE: 'Permissions.Calender.Delete',
+      SEARCH: 'Permissions.Calender.Search',
     },
   };
   
