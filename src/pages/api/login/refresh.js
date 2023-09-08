@@ -1,5 +1,7 @@
-import {API_METHODS, API_URL} from "../../../utils/api-endpoints";
+// import {API_METHODS, API_URL} from "../../../utils/api-endpoints";
 import { backendAxiosInstance } from "../../../utils/axiosInstance/backedAxiosInstance";
+import { API_URL,API_METHODS } from '../../../utils/api-endpoints'
+
 
 
 const SimpleCrypto = require("simple-crypto-js").default;
@@ -16,17 +18,11 @@ export const config = {
 export default async function handler(req, res) {
     if (req.method === API_METHODS.POST) {
         const body = req.body;
-        if (body?.data !== undefined) {
+        console.log("REFRESH_BODY ",body);
+        if (body?.refresh !== undefined) {
             try {
-                const formData = secretKey.decrypt(body.data);
-                console.log(formData);
-                const config = {
-                    params: {
-                        Username: formData?.Username,
-                        Password: formData?.Password
-                    }
-                }
-                await backendAxiosInstance.post(API_URL.LOGIN,{}, config).then(response => {
+                const formData = body
+                await backendAxiosInstance.post(API_URL.REFRESH_TOKEN,formData).then(response => {
                     res.status(response.status).json(secretKey.encrypt(response.data));
                     console.log(response.data);
                 }).catch(e => res.status(e?.response?.status ?? 500).json(e.response?.data))

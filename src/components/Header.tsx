@@ -3,7 +3,7 @@ import { AiOutlineMenu, AiOutlineDown,AiOutlineUp } from "react-icons/ai";
 import { Drawer } from "./Drawer";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { authContext } from "@/AuthContext/context";
+import { authContext } from "@/AuthContext";
 
 type props = {
   collapsed: boolean;

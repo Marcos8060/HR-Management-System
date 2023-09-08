@@ -30,17 +30,19 @@ const Login = () => {
   });
   return (
     <>
-      <section className="bg-surface h-screen flex items-center justify-center px-4">
-        <section className="bg-white shadow-2xl md:w-4/12 w-full mx-auto rounded p-4 space-y-8">
+      <section className="h-screen flex items-center justify-center px-4">
+        <section className="border rounded p-4 space-y-8">
           <div>
             <h1 className="text-center text-xl">Login</h1>
             <p className="text-center">Access to our dashboard</p>
           </div>
           <form
-            className="flex flex-col space-y-4"
+            className="grid space-y-4 md:w-4/12 w-full"
             onSubmit={formik.handleSubmit}
           >
             <TextField
+              className="block"
+              fullWidth
               label="username"
               name="username"
               onChange={formik.handleChange}
@@ -49,6 +51,7 @@ const Login = () => {
               helperText={formik.touched.username && formik.errors.username}
             />
             <TextField
+             fullWidth
               label="password"
               name="password"
               onChange={formik.handleChange}

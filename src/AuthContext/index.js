@@ -55,6 +55,7 @@ export const AuthProvider = ({ children }) => {
     router.push("/");
   };
 
+  
   let contextData = {
     loginUser: loginUser,
     message: message,

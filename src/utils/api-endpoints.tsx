@@ -17,7 +17,7 @@ export const APP_API_URL = {
 
     /***************** AUTH **********************/
     LOGIN: '/api/login',
-    REFRESH_TOKEN: '/api/token/refresh/',
+    REFRESH_TOKEN: '/api/login/refresh',
    
 
 }
