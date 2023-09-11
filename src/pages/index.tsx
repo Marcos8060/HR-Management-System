@@ -5,11 +5,11 @@ import Layout from "@/components/Layout";
 export default function Home() {
   return (
     <>
-      <Admin />
+      <Login />
     </>
   );
 }
 
-Home.getLayout = (page: React.ReactNode) =>(
-  <Layout>{page}</Layout>
-)
+// Home.getLayout = (page: React.ReactNode) =>(
+//   <Layout>{page}</Layout>
+// )
