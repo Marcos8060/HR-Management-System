@@ -1,11 +1,11 @@
-import React,{ReactNode} from 'react'
+import React,{ReactNode,useContext} from 'react'
 import { useSelector } from 'react-redux'
-import { menus } from '../menu'
-import { useRouter } from 'next/router'
 import NotAuthorized from '@/pages/dashboard/not-authorised'
+import { authContext } from '@/AuthContext'
+import Login from '@/AuthContext/login'
+import Layout from '@/components/Layout'
 
 type ProtectedRouteProps = {
-    href: string;
     permission: string,
     children: ReactNode
   }
@@ -29,8 +29,10 @@ const ProtectedRoute = ({ permission,children }: ProtectedRouteProps) => {
     }
 
   return (
-    <>{ children }</>
+    <Layout>{ children }</Layout>
   )
 }
+
+
 
 export default ProtectedRoute

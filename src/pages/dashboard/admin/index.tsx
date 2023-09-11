@@ -10,7 +10,7 @@ import ProtectedRoute from "@/assets/utils/hoc/protected-route";
 
 const Admin = () => {
   return (
-    <ProtectedRoute href="/dashboard/admin" permission="ACCESS_ADMIN_DASHBOARD">
+    <ProtectedRoute permission="ACCESS_ADMIN_DASHBOARD">
       <Container maxWidth="xl" className="py-4">
         <h1 className="text-xl mb-4">Welcome Admin</h1>
         <Grid container spacing={2}>

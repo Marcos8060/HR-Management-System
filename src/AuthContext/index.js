@@ -4,10 +4,9 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 import SimpleCrypto from "simple-crypto-js";
-import { toast } from 'react-toastify'
-import { useDispatch } from 'react-redux'
+import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
 import { getAllUserPermissions } from "@/redux/features/auth";
-
 
 export const authContext = createContext();
 
@@ -40,15 +39,13 @@ export const AuthProvider = ({ children }) => {
         const data = secretKey.decrypt(response.data);
         setAuthToken(data);
         const decodedUser = jwtDecode(data.access);
-        console.log("DECODED_USER_DETAILS ",decodedUser);
         setUser(decodedUser);
         try {
-          const res = await dispatch(getAllUserPermissions(decodedUser?.user_id));
-          console.log("PERMISSIONS RESPONSE ",res);
+          await dispatch(getAllUserPermissions(decodedUser?.user_id));
           router.push("/dashboard/admin");
           localStorage.setItem("token", JSON.stringify(data));
         } catch (error) {
-          console.log("PERMISSIONS ERROR ",error);
+          console.log("PERMISSIONS ERROR ", error);
         }
       }
     } catch (error) {
@@ -66,7 +63,6 @@ export const AuthProvider = ({ children }) => {
     router.push("/");
   };
 
-  
   let contextData = {
     loginUser: loginUser,
     message: message,
@@ -77,10 +73,17 @@ export const AuthProvider = ({ children }) => {
   // decode the token and set the user when a component mounts
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
+    let decodedToken;
     if (storedToken) {
-      const decodedToken = jwtDecode(storedToken);
+      decodedToken = jwtDecode(storedToken);
       setUser(decodedToken);
     }
+    const fetchPermissions = async () => {
+      if (decodedToken) {
+        await dispatch(getAllUserPermissions(decodedToken.user_id));
+      }
+    };
+    fetchPermissions();
   }, []);
 
   return (
