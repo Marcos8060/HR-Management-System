@@ -29,7 +29,7 @@ const ProtectedRoute = ({ permission,children }: ProtectedRouteProps) => {
     }
 
   return (
-    <Layout>{ children }</Layout>
+    <>{ children }</>
   )
 }
 
