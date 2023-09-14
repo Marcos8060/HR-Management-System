@@ -10,8 +10,8 @@ const AllEmployees = () => {
   return (
     <>
      <Head>{title}</Head>
-      <Container maxWidth="xl" className="py-4 space-y-4">
-        <h1 className="text-xl font-semibold">{title}</h1>
+      <Container maxWidth="xl" className="py-6 space-y-8">
+        <h1 className="text-2xl">{title}</h1>
         <EmployeesDataGrid />
       </Container>
     </>
