@@ -10,20 +10,19 @@ const DataGrid = dynamic(() => import("devextreme-react/data-grid"), {
 const EmployeesDataGrid = () => {
   const users = [
     {
-      project_name: "Hospital Management System",
-      progress: "Inprogres",
+      employee_name: "Marcos Ochieng",
+      email: "marcosgav80@gmail.com",
+      role: "Front End Developer",
     },
     {
-      project_name: "Admin Portal",
-      progress: "completed",
+      employee_name: "Marcos Ochieng",
+      email: "marcosgav80@gmail.com",
+      role: "Back End Developer",
     },
     {
-      project_name: "Admin Portal",
-      progress: "On hold",
-    },
-    {
-      project_name: "Admin Portal",
-      progress: "Under Review",
+      employee_name: "Marcos Ochieng",
+      email: "marcosgav80@gmail.com",
+      role: "Devops Engineer",
     },
   ];
   return (
@@ -40,9 +39,9 @@ const EmployeesDataGrid = () => {
         height={"70vh"}
         className="shadow-2xl w-full"
       >
-        <Column dataField="project_name" caption="Employee Name" width={300} />
-        <Column dataField="project_name" caption="Email" width={300} />
-        <Column dataField="project_name" caption="Role" width={240} />
+        <Column dataField="employee_name" caption="Employee Name" width={300} />
+        <Column dataField="email" caption="Email" width={300} />
+        <Column dataField="role" caption="Role" width={240} />
         <Column
           dataField="status"
           caption="Action"

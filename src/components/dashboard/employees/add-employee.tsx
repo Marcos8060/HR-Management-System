@@ -27,26 +27,40 @@ const AddEmployee = () => {
         Add Employee
       </button>
       <Dialog
+        maxWidth="sm"
+        fullWidth
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending
-            anonymous location data to Google, even when no apps are running.
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Disagree</Button>
-          <Button onClick={handleClose} autoFocus>
-            Agree
-          </Button>
-        </DialogActions>
+        <DialogTitle id="alert-dialog-title">{"Add Employee"}</DialogTitle>
+        <form>
+          <DialogContent>
+            <section className="space-y-4">
+              <input
+                className="block border-2 border-primary rounded-3xl px-2 py-3 focus:outline-none w-full"
+                type="text"
+                placeholder="Username"
+              />
+              <input
+                className="block border-2 border-primary rounded-3xl px-2 py-3 focus:outline-none w-full"
+                type="text"
+                placeholder="Email"
+              />
+              <input
+                className="block border-2 border-primary rounded-3xl px-2 py-3 focus:outline-none w-full"
+                type="text"
+                placeholder="Password"
+              />
+              <div className="flex justify-end">
+                <button className="bg-primary px-4 py-2 rounded-xl text-white">
+                  Save
+                </button>
+              </div>
+            </section>
+          </DialogContent>
+        </form>
       </Dialog>
     </>
   );
