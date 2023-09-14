@@ -7,7 +7,7 @@ export const API_URL = {
     LOGIN: '/api/token/',
     REFRESH_TOKEN: '/api/token/refresh/',
     GET_USER_PERMISSIONS: '/api/permissions',
-
+    CREATE_EMPLOYEE: '/api/register',
 }
 
 
@@ -18,7 +18,7 @@ export const APP_API_URL = {
     LOGIN: '/api/login',
     REFRESH_TOKEN: '/api/login/refresh',
     GET_USER_PERMISSIONS: '/api/login/user-permissions',
-
+    CREATE_EMPLOYEE: '/api/employee',
    
 
 }
