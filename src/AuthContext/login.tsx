@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { TextField } from "@mui/material";
 import Link from "next/link";
 import * as yup from "yup";
 import { useFormik } from "formik";
 import { authContext } from ".";
+import Alert from '@mui/material/Alert';
 
 const Login = () => {
   const { loginUser, message } = useContext(authContext);
+  console.log("LOGIN_ERROR ",message);
   const validationSchema = yup.object({
     username: yup.string().required("Username is required"),
     password: yup.string().required("Password is required"),
@@ -29,6 +31,7 @@ const Login = () => {
     <>
       <section className="h-screen flex items-center justify-center px-4 bg-[#DFEAF0]">
         <section className="p-4 space-y-8 bg-white rounded shadow-2xl">
+        {message && <Alert severity="error">{message}</Alert> }
           <div>
             <div>
               <h1 className="text-center text-xl">Login</h1>

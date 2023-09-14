@@ -14,7 +14,8 @@ const config: Config = {
       black: '#000000',
       yellow: '#FFD831',
       surface: '#DFEAF0',
-      link: '#0D6EFD'
+      link: '#0D6EFD',
+      red: '#D32F2F',
     }
   },
   plugins: [],

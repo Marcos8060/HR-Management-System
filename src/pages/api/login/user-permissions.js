@@ -23,7 +23,6 @@ export default async function handler(req, res) {
             // };
 
             const body = req.query;
-            console.log("USER_PERMISSIONS_BODY ",body);
 
 
             await backendAxiosInstance.get(`${API_URL.GET_USER_PERMISSIONS}/${body.userId}`).then(response => {

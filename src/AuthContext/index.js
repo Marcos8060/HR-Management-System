@@ -45,13 +45,10 @@ export const AuthProvider = ({ children }) => {
           router.push("/dashboard");
           localStorage.setItem("token", JSON.stringify(data));
         } catch (error) {
-          console.log("PERMISSIONS ERROR ", error);
         }
       }
     } catch (error) {
-      console.log("LOGIN_CONTEXT_ERROR ", error);
       setMessage(error.response.data.detail);
-      toast.error(message);
     }
   };
 
