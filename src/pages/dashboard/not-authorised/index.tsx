@@ -10,7 +10,7 @@ const NotAuthorized = () => {
         <p className="font-semibold">Restricted Access</p>
         <p>You lack permission to access this page</p>
         <Link href="/dashboard/employee">
-          <button className="bg-primary text-white rounded px-4 py-2">
+          <button className="rounded text-white text-sm font-bold bg-primary px-4 py-1 my-2">
             Back to Dashboard
           </button>
         </Link>
@@ -19,9 +19,5 @@ const NotAuthorized = () => {
   );
 };
 
-
-NotAuthorized.getLayout = (page: React.ReactNode) => (
-  <Layout>{page}</Layout>
-)
 
 export default NotAuthorized;

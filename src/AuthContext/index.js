@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
         setUser(decodedUser);
         try {
           await dispatch(getAllUserPermissions(decodedUser?.user_id));
-          router.push("/dashboard/admin");
+          router.push("/dashboard");
           localStorage.setItem("token", JSON.stringify(data));
         } catch (error) {
           console.log("PERMISSIONS ERROR ", error);
