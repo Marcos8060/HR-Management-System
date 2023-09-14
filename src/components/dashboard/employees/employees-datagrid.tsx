@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { Column, Item, SearchPanel, Toolbar } from "devextreme-react/data-grid";
+import AddEmployee from "./add-employee";
 
 const DataGrid = dynamic(() => import("devextreme-react/data-grid"), {
   ssr: false,
@@ -48,11 +49,11 @@ const EmployeesDataGrid = () => {
           width={100}
           allowFiltering={false}
         />
-        {/* <Toolbar>
-          <Item location="before">
-            <p className="text-xl font-semibold">Recent Projects</p>
+        <Toolbar>
+          <Item location="after">
+            <AddEmployee />
           </Item>
-        </Toolbar> */}
+        </Toolbar>
       </DataGrid>
     </section>
   );
