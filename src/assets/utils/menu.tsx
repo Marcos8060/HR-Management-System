@@ -36,7 +36,7 @@ export const menus = [
     children: [
       {
         label: "All Employees",
-        href: "/dashboard/sector/fintech",
+        href: "/dashboard/employee/all-employees",
         icon: <UserGroupIcon className="w-6 h-6" />,
         permission: 'ACCESS_EMPLOYEES'
       },
