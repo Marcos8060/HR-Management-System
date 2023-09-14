@@ -21,7 +21,7 @@ const AddEmployee = () => {
     <>
       <button
         onClick={handleClickOpen}
-        className="bg-black rounded flex items-center gap-2 text-white px-3 py-2 text-sm"
+        className="bg-primary rounded flex items-center gap-2 text-white px-3 py-2 text-sm"
       >
         <AiOutlinePlus className="text-xl" />
         Add Employee
