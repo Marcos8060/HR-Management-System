@@ -37,7 +37,7 @@ const ApprovedProjectsDataGrid = () => {
         showRowLines={true}
         wordWrapEnabled={true}
         height={"70vh"}
-        className="shadow-xl"
+        className="shadow-2xl"
       >
         <Column dataField="project_name" caption="Project Name" width={200} />
         <Column dataField="project_name" caption="Project Name" width={200} />

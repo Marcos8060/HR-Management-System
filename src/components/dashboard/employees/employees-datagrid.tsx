@@ -37,17 +37,15 @@ const EmployeesDataGrid = () => {
         showRowLines={true}
         wordWrapEnabled={true}
         height={"70vh"}
-        className="shadow-xl"
+        className="shadow-2xl w-full"
       >
-        <Column dataField="project_name" caption="Project Name" width={200} />
-        <Column dataField="project_name" caption="Project Name" width={200} />
-        <Column dataField="project_name" caption="Project Name" width={200} />
-        <Column dataField="project_name" caption="Project Name" width={200} />
-        <Column dataField="progress" caption="Progress" width={200} />
+        <Column dataField="project_name" caption="Employee Name" width={300} />
+        <Column dataField="project_name" caption="Email" width={300} />
+        <Column dataField="project_name" caption="Role" width={240} />
         <Column
           dataField="status"
           caption="Action"
-          width={140}
+          width={100}
           allowFiltering={false}
         />
         {/* <Toolbar>
