@@ -9,7 +9,7 @@ const NotAuthorized = () => {
         <h1 className="text-7xl font-bold">403</h1>
         <p className="font-semibold">Restricted Access</p>
         <p>You lack permission to access this page</p>
-        <Link href="/dashboard/employee">
+        <Link href="/dashboard">
           <button className="rounded text-white text-sm font-bold bg-primary px-4 py-1 my-2">
             Back to Dashboard
           </button>
