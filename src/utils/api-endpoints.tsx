@@ -4,7 +4,7 @@ export const API_URL = {
 
     /***************** AUTHENTICATION APIS **********************/
     // LOGIN: '/api/v1/sponsorauth/login',
-    LOGIN: '/api/token/',
+    LOGIN: '/api/login/',
     REFRESH_TOKEN: '/api/token/refresh/',
     GET_USER_PERMISSIONS: '/api/permissions',
     CREATE_EMPLOYEE: '/api/register',
