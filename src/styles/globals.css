@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter+Tight:wght@300;400;900&family=Inter:wght@200;300;400&family=Josefin+Sans:wght@300;400&family=Kumbh+Sans&family=Montserrat:wght@400;500&family=Nunito:wght@400;500;600;700&family=Poltawski+Nowy:wght@500&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&family=Space+Grotesk&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter+Tight:wght@300;400;900&family=Inter:wght@200;300;400&family=Josefin+Sans:wght@300;400&family=Kumbh+Sans&family=Montserrat:wght@400;500&family=Nunito:wght@400;500;600;700&family=Poltawski+Nowy:wght@500&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&family=Space+Grotesk&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Inter+Tight&family=Kumbh+Sans&family=Nunito:wght@400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  font-family: "Space Grotesk", sans-serif;
+  /* font-family: "Space Grotesk", sans-serif; */
+  font-family: 'Inter', sans-serif;
 }
 
 ::-webkit-scrollbar {

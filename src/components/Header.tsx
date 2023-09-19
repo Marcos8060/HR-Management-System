@@ -47,10 +47,10 @@ const Header = ({ collapsed }: props) => {
 
   return (
     <>
-      <section className="flex justify-between sm:px-8 px-2 py-4 sticky top-0 z-50 shadow-xl bg-white md:bg-opacity-30 md:backdrop-filter md:backdrop-blur-lg">
-        <div className="">
+      <section className="flex justify-end sm:px-8 px-2 py-4 sticky top-0 z-50 shadow-xl bg-white md:bg-opacity-30 md:backdrop-filter md:backdrop-blur-lg">
+        {/* <div className="">
           <h1 className="text-xl">HR Management System</h1>
-        </div>
+        </div> */}
 
         <div className="flex items-center gap-4">
           <div className="md:hidden block">
