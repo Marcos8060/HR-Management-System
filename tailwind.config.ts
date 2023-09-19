@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     colors:{
-      primary: '#1C212D',
+      primary: '#272684',
       white: '#FFFFFF',
       hover: '#2C5BCD',
       black: '#000000',

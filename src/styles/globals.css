@@ -1,22 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter+Tight:wght@300;400;900&family=Inter:wght@200;300;400&family=Josefin+Sans:wght@300;400&family=Kumbh+Sans&family=Montserrat:wght@400;500&family=Nunito:wght@400;500;600;700&family=Poltawski+Nowy:wght@500&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&family=Space+Grotesk&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter+Tight:wght@300;400;900&family=Inter:wght@200;300;400&family=Josefin+Sans:wght@300;400&family=Kumbh+Sans&family=Montserrat:wght@400;500&family=Nunito:wght@400;500;600;700&family=Poltawski+Nowy:wght@500&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&family=Space+Grotesk&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-*{
-  font-family: 'Space Grotesk', sans-serif;
+* {
+  font-family: "Space Grotesk", sans-serif;
 }
 
 ::-webkit-scrollbar {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #FFD831; 
+  background: #ffd831;
 }
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
+}
+
+.registerPage {
+  background: url("/images/signup.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+.registerPage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: -1;
 }
