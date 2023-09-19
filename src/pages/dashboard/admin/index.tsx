@@ -7,12 +7,14 @@ import Statistics from "./statistics";
 import Tables from "./tables";
 import Layout from "@/components/Layout";
 import ProtectedRoute from "@/assets/utils/hoc/protected-route";
+import { useAuth } from "@/assets/hooks/use-auth";
 
 const Admin = () => {
+  const user = useAuth()
   return (
     <ProtectedRoute permission="ACCESS_ADMIN_DASHBOARD">
       <Container maxWidth="xl" className="py-4">
-        <h1 className="text-xl mb-4">Welcome Admin</h1>
+        <h1 className="text-xl mb-4">Welcome {user?.username}</h1>
         <Grid container spacing={2}>
           {dashboardData.map((data, index) => (
             <Grid item md={3} xs={12} key={index}>

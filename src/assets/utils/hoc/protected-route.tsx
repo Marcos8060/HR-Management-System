@@ -12,16 +12,20 @@ type ProtectedRouteProps = {
 
   type Permission = {
     id: number;
-    permission: string;
+    name: string;
     role_name: string;
   };
 
 const ProtectedRoute = ({ permission,children }: ProtectedRouteProps) => {
     const { userPermissions } = useSelector(( { auth }) => auth)
 
+    console.log("USER_PERMISSIONS ",userPermissions)
+
 
     // check if current user has permission to access the route in question
-    const isAuthorized = userPermissions && userPermissions.find((perm: Permission) => perm.permission === permission)
+    const isAuthorized = userPermissions && userPermissions.find((perm: Permission) => perm.name === permission)
+
+    console.log("BOOLEAN ",isAuthorized)
 
 
     if (!isAuthorized) {
