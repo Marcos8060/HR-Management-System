@@ -5,7 +5,7 @@ import Layout from "@/components/Layout";
 const NotAuthorized = () => {
   return (
     <section className="p-12 h-[88vh] flex items-center justify-center">
-      <div className="bg-white p-8 space-y-4 rounded md:bg-opacity-60 md:backdrop-filter md:backdrop-blur-lg w-5/12 mx-auto text-center">
+      <div className="bg-white p-8 space-y-4 rounded md:bg-opacity-60 md:backdrop-filter md:backdrop-blur-lg md:w-5/12 mx-auto text-center">
         <h1 className="text-7xl font-bold">403</h1>
         <p className="font-semibold">Restricted Access</p>
         <p>You lack permission to access this page</p>
