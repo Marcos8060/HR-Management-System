@@ -12,6 +12,7 @@ const config: Config = {
       white: '#FFFFFF',
       hover: '#2C5BCD',
       black: '#000000',
+      background: '#DFEAF0',
       yellow: '#FFD831',
       surface: '#DFEAF0',
       link: '#0D6EFD',

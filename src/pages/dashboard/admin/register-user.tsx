@@ -90,7 +90,7 @@ const RegisterUser = () => {
 
   return (
     <ProtectedRoute permission="CAN_REGISTER_USERS">
-    <div className="rounded w-full mx-auto sm:px-12 px-4 py-4 h-[100vh] flex items-center justify-center relative">
+    <div className="bg-background bg-opacity-60 backdrop-filter backdrop-blur-lg w-full mx-auto sm:px-12 px-4 py-4 h-[100vh] flex items-center justify-center relative">
       <section className="w-full">
         <Link
           href="/dashboard/admin"
@@ -100,14 +100,14 @@ const RegisterUser = () => {
           <p className="text-primary font-semibold">Back to Dashboard</p>
         </Link>
         <section className="flex gap-8">
-          <div className="md:block hidden w-5/12 space-y-8 flex items-center justify-center">
+          <div className="md:block hidden w-1/2 space-y-8 flex items-center justify-center">
             <img
               className="rounded object-contain"
               src="/images/rocket.png"
               alt=""
             />
           </div>
-          <div className="md:w-7/12 w-full space-y-4">
+          <div className="md:w-1/2 w-full space-y-4">
             <h1 className="text-center mb-2 text-primary font-semibold">
               Create User Account
             </h1>
@@ -121,7 +121,7 @@ const RegisterUser = () => {
                   <div className="space-y-4 md:w-1/2 w-full">
                     <section className="h-16">
                       <Field
-                        className="block border rounded border-primary bg-transparent px-4 py-3 focus:outline-none w-full"
+                        className="block border-b border-primary bg-background px-4 py-3 focus:outline-none w-full"
                         type="text"
                         placeholder="Full Name"
                         name="full_name"
@@ -134,7 +134,7 @@ const RegisterUser = () => {
                     </section>
                     <section className="h-16">
                       <Field
-                        className="block border rounded border-primary px-4 py-3 focus:outline-none w-full"
+                        className="block border-b bg-background border-primary px-4 py-3 focus:outline-none w-full"
                         type="text"
                         placeholder="Email"
                         name="email"
@@ -147,7 +147,7 @@ const RegisterUser = () => {
                     </section>
                     <section className="h-16">
                       <Field
-                        className="block border rounded border-primary px-4 py-3 focus:outline-none w-full"
+                        className="block border-b bg-background border-primary px-4 py-3 focus:outline-none w-full"
                         type="text"
                         placeholder="Username"
                         name="username"
@@ -162,7 +162,7 @@ const RegisterUser = () => {
                   <div className="space-y-4 md:w-1/2 w-full">
                     <section className="h-16">
                       <Field
-                        className="block border rounded border-primary px-4 py-3 focus:outline-none w-full"
+                        className="block border-b bg-background border-primary px-4 py-3 focus:outline-none w-full"
                         type="text"
                         placeholder="Occupation"
                         name="occupation"
@@ -176,12 +176,12 @@ const RegisterUser = () => {
                     <section className="h-16">
                       <Field
                         as="select"
-                        className="block border cursor-pointer rounded border-primary px-4 py-3 appearance-none focus:outline-none w-full"
+                        className="block border-b bg-background cursor-pointer border-primary px-4 py-3 appearance-none focus:outline-none w-full"
                         placeholder="Role"
                         name="role"
                       >
                         <option value="" disabled selected>
-                          Select a role
+                          Assign Role
                         </option>
                         {roles.map((role, index) => (
                           <option key={index} value="role1">
@@ -197,7 +197,7 @@ const RegisterUser = () => {
                     </section>
                     <section className="h-16">
                       <Field
-                        className="block border rounded
+                        className="block border-b bg-background
                          border-primary px-4 py-3 focus:outline-none w-full"
                         type="text"
                         placeholder="Password"
