@@ -11,19 +11,19 @@ import { useSelector, useDispatch } from "react-redux";
 import { getAllRoles } from "@/redux/features/auth";
 import { useAuth } from "@/assets/hooks/use-auth";
 
-
 type Roles = {
   id: number;
   name: string;
-}
+};
 
 type Dispatch = {
-  dispatch : React.ReactNode
-}
-
+  dispatch: React.ReactNode;
+};
 
 const RegisterUser = () => {
-  const { roles } = useSelector(({ auth }: { auth: { roles: Roles[] } }) => auth);
+  const { roles } = useSelector(
+    ({ auth }: { auth: { roles: Roles[] } }) => auth
+  );
   const dispatch = useDispatch();
 
   console.log("ALL_ROLES ", roles);
@@ -118,82 +118,96 @@ const RegisterUser = () => {
               <Form className="space-y-4">
                 <section className="md:flex gap-4 items-center">
                   <div className="space-y-4 md:w-1/2 w-full">
-                    <Field
-                      className="block border rounded border-primary bg-transparent px-4 py-3 focus:outline-none w-full"
-                      type="text"
-                      placeholder="Full Name"
-                      name="full_name"
-                    />
-                    <ErrorMessage
-                      name="full_name"
-                      component="div"
-                      className="text-red text-xs"
-                    />
-                    <Field
-                      className="block border rounded border-primary px-4 py-3 focus:outline-none w-full"
-                      type="text"
-                      placeholder="Email"
-                      name="email"
-                    />
-                    <ErrorMessage
-                      name="email"
-                      component="div"
-                      className="text-red text-xs"
-                    />
-                    <Field
-                      className="block border rounded border-primary px-4 py-3 focus:outline-none w-full"
-                      type="text"
-                      placeholder="Username"
-                      name="username"
-                    />
-                    <ErrorMessage
-                      name="username"
-                      component="div"
-                      className="text-red text-xs"
-                    />
+                    <section className="h-16">
+                      <Field
+                        className="block border rounded border-primary bg-transparent px-4 py-3 focus:outline-none w-full"
+                        type="text"
+                        placeholder="Full Name"
+                        name="full_name"
+                      />
+                      <ErrorMessage
+                        name="full_name"
+                        component="div"
+                        className="text-red text-xs"
+                      />
+                    </section>
+                    <section className="h-16">
+                      <Field
+                        className="block border rounded border-primary px-4 py-3 focus:outline-none w-full"
+                        type="text"
+                        placeholder="Email"
+                        name="email"
+                      />
+                      <ErrorMessage
+                        name="email"
+                        component="div"
+                        className="text-red text-xs"
+                      />
+                    </section>
+                    <section className="h-16">
+                      <Field
+                        className="block border rounded border-primary px-4 py-3 focus:outline-none w-full"
+                        type="text"
+                        placeholder="Username"
+                        name="username"
+                      />
+                      <ErrorMessage
+                        name="username"
+                        component="div"
+                        className="text-red text-xs"
+                      />
+                    </section>
                   </div>
                   <div className="space-y-4 md:w-1/2 w-full">
-                    <Field
-                      className="block border rounded border-primary px-4 py-3 focus:outline-none w-full"
-                      type="text"
-                      placeholder="Occupation"
-                      name="occupation"
-                    />
-                    <ErrorMessage
-                      name="occupation"
-                      component="div"
-                      className="text-red text-xs"
-                    />
-                    <Field
-                      as="select"
-                      className="block border cursor-pointer rounded border-primary px-4 py-3 appearance-none focus:outline-none w-full"
-                      placeholder="Role"
-                      name="role"
-                    >
-                      <option value="" disabled selected>
-                        Select a role
-                      </option>
-                      {roles.map((role, index) => (
-                        <option key={index} value="role1">{role.name}</option>
-                      ))}
-                    </Field>
-                    <ErrorMessage
-                      name="role"
-                      component="div"
-                      className="text-red text-xs"
-                    />
-                    <Field
-                      className="block border rounded
+                    <section className="h-16">
+                      <Field
+                        className="block border rounded border-primary px-4 py-3 focus:outline-none w-full"
+                        type="text"
+                        placeholder="Occupation"
+                        name="occupation"
+                      />
+                      <ErrorMessage
+                        name="occupation"
+                        component="div"
+                        className="text-red text-xs"
+                      />
+                    </section>
+                    <section className="h-16">
+                      <Field
+                        as="select"
+                        className="block border cursor-pointer rounded border-primary px-4 py-3 appearance-none focus:outline-none w-full"
+                        placeholder="Role"
+                        name="role"
+                      >
+                        <option value="" disabled selected>
+                          Select a role
+                        </option>
+                        {roles.map((role, index) => (
+                          <option key={index} value="role1">
+                            {role.name}
+                          </option>
+                        ))}
+                      </Field>
+                      <ErrorMessage
+                        name="role"
+                        component="div"
+                        className="text-red text-xs"
+                      />
+                    </section>
+                    <section className="h-16">
+                      <Field
+                        className="block border rounded
                          border-primary px-4 py-3 focus:outline-none w-full"
-                      type="text"
-                      placeholder="Password"
-                      name="password"
-                    />
-                    <ErrorMessage
-                      name="password"
-                      component="div"
-                      className="text-red text-xs"
-                    />
+                        type="text"
+                        placeholder="Password"
+                        name="password"
+                      />
+                      <ErrorMessage
+                        name="password"
+                        component="div"
+                        className="text-red text-xs"
+                      />
+                    </section>
                   </div>
                 </section>
                 <button className="bg-primary shadow-2xl rounded text-white w-full px-4 py-3">
