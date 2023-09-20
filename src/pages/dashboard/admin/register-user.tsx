@@ -12,6 +12,8 @@ const RegisterUser = () => {
     username: "",
     email: "",
     password: "",
+    role: "",
+    occupation: "",
   };
 
   const validationSchema = Yup.object().shape({
@@ -35,8 +37,8 @@ const RegisterUser = () => {
           !val || (val.toString().length >= 6 && val.toString().length <= 40)
       )
       .required("This field is required!"),
-    occupation: Yup.string().required("This field is required!"),
     role: Yup.string().required("This field is required!"),
+    occupation: Yup.string().required("This field is required!"),
   });
 
   //   CREATE EMPLOYEE FUNCTION
@@ -64,14 +66,14 @@ const RegisterUser = () => {
               <p className="text-primary font-semibold">Back to Dashboard</p>
             </Link>
             <section className="flex gap-8">
-              <div className="w-1/2 space-y-8 flex items-center justify-center">
+              <div className="w-4/12 space-y-8 flex items-center justify-center">
                 <img
                   className="rounded object-contain"
                   src="/images/rocket.png"
                   alt=""
                 />
               </div>
-              <div className="md:w-1/2 w-full space-y-2">
+              <div className="md:w-8/12 w-full space-y-4">
                 <h1 className="text-center mb-2 text-primary font-semibold">
                   Create User Account
                 </h1>
@@ -80,44 +82,81 @@ const RegisterUser = () => {
                   validationSchema={validationSchema}
                   onSubmit={handleCreateEmployee}
                 >
-                  <Form className="space-y-3">
-                    <Field
-                      className="block border rounded-3xl border-primary bg-transparent px-4 py-3 focus:outline-none w-full"
-                      type="text"
-                      placeholder="Full Name"
-                      name="full_name"
-                    />
-                    <Field
-                      className="block border rounded-3xl border-primary px-4 py-3 focus:outline-none w-full"
-                      type="text"
-                      placeholder="Email"
-                      name="email"
-                    />
-                    <Field
-                      className="block border rounded-3xl border-primary px-4 py-3 focus:outline-none w-full"
-                      type="text"
-                      placeholder="Username"
-                      name="username"
-                    />
-                    <Field
-                      className="block border rounded-3xl border-primary px-4 py-3 focus:outline-none w-full"
-                      type="text"
-                      placeholder="Occupation"
-                      name="occupation"
-                    />
-                    <Field
-                      className="block border rounded-3xl border-primary px-4 py-3 focus:outline-none w-full"
-                      type="text"
-                      placeholder="Role"
-                      name="role"
-                    />
-                    <Field
-                      className="block border rounded-3xl border-primary px-4 py-3 focus:outline-none w-full"
-                      type="text"
-                      placeholder="Password"
-                      name="password"
-                    />
-                    <button className="bg-primary shadow-2xl rounded text-white w-full px-4 py-3">
+                  <Form className="space-y-4">
+                    <section className="flex gap-4 items-center">
+                      <div className="space-y-4 w-1/2">
+                        <Field
+                          className="block border rounded-xl border-primary bg-transparent px-4 py-3 focus:outline-none w-full"
+                          type="text"
+                          placeholder="Full Name"
+                          name="full_name"
+                        />
+                        <ErrorMessage
+                          name="full_name"
+                          component="div"
+                          className="text-red text-xs"
+                        />
+                        <Field
+                          className="block border rounded-xl border-primary px-4 py-3 focus:outline-none w-full"
+                          type="text"
+                          placeholder="Email"
+                          name="email"
+                        />
+                        <ErrorMessage
+                          name="email"
+                          component="div"
+                          className="text-red text-xs"
+                        />
+                        <Field
+                          className="block border rounded-xl border-primary px-4 py-3 focus:outline-none w-full"
+                          type="text"
+                          placeholder="Username"
+                          name="username"
+                        />
+                        <ErrorMessage
+                          name="username"
+                          component="div"
+                          className="text-red text-xs"
+                        />
+                      </div>
+                      <div className="space-y-4 w-1/2">
+                        <Field
+                          className="block border rounded-xl border-primary px-4 py-3 focus:outline-none w-full"
+                          type="text"
+                          placeholder="Occupation"
+                          name="occupation"
+                        />
+                        <ErrorMessage
+                          name="occupation"
+                          component="div"
+                          className="text-red text-xs"
+                        />
+                        <Field
+                          className="block border rounded-xl border-primary px-4 py-3 focus:outline-none w-full"
+                          type="text"
+                          placeholder="Role"
+                          name="role"
+                        />
+                        <ErrorMessage
+                          name="role"
+                          component="div"
+                          className="text-red text-xs"
+                        />
+                        <Field
+                          className="block border rounded-xl
+                         border-primary px-4 py-3 focus:outline-none w-full"
+                          type="text"
+                          placeholder="Password"
+                          name="password"
+                        />
+                        <ErrorMessage
+                          name="password"
+                          component="div"
+                          className="text-red text-xs"
+                        />
+                      </div>
+                    </section>
+                    <button className="bg-primary shadow-2xl rounded-xl text-white w-full px-4 py-3">
                       Send
                     </button>
                   </Form>
