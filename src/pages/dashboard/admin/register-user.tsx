@@ -67,6 +67,7 @@ const RegisterUser = () => {
     formValue: FormikValues,
     helpers: FormikHelpers<any>
   ) => {
+    console.log("VALUES ",formValue)
     try {
       await registerUser(formValue).then(() => {
         helpers.resetForm();
@@ -88,7 +89,7 @@ const RegisterUser = () => {
   }, []);
 
   return (
-    // <ProtectedRoute permission="CAN_REGISTER_USERS">
+    <ProtectedRoute permission="CAN_REGISTER_USERS">
     <div className="rounded w-full mx-auto sm:px-12 px-4 py-4 h-[100vh] flex items-center justify-center relative">
       <section className="w-full">
         <Link
@@ -219,7 +220,7 @@ const RegisterUser = () => {
         </section>
       </section>
     </div>
-    // </ProtectedRoute>
+    </ProtectedRoute>
   );
 };
 

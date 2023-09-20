@@ -20,7 +20,7 @@ export const fetchUserPermissions = (userId) =>{
 
 export const registerUser = (payload) =>{
     return new Promise((resolve,reject) =>{
-        axios.get(`${APP_API_URL.CREATE_USER}`,payload)
+        axios.post(`${APP_API_URL.CREATE_USER}`,payload)
             .then((res) =>{
                 resolve(res.data)
             })
