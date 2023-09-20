@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchUserPermissions } from "../../services/auth";
+import { fetchRoles, fetchUserPermissions } from "../../services/auth";
+
 
 const initialState = {
   userPermissions: [],
+  roles: [],
 };
 
 const PermissionSlice = createSlice({
@@ -12,10 +14,14 @@ const PermissionSlice = createSlice({
     setUserPermissions: (state, action) => {
       state.userPermissions = action.payload;
     },
+    setRoles: (state, action) => {
+      state.roles = action.payload;
+    },
   },
 });
 
-export const { setUserPermissions } = PermissionSlice.actions;
+export const { setUserPermissions,setRoles } = PermissionSlice.actions;
+
 
 export const getAllUserPermissions = (userId) => async (dispatch) => {
   try {
@@ -23,6 +29,15 @@ export const getAllUserPermissions = (userId) => async (dispatch) => {
     dispatch(setUserPermissions(response));
   } catch (error) {
     console.log("USER_PERMISSIONS_ERROR ", error);
+  }
+};
+
+export const getAllRoles = () => async (dispatch) => {
+  try {
+    const response = await fetchRoles();
+    dispatch(setRoles(response));
+  } catch (error) {
+    console.log("ROLES_ERROR ", error);
   }
 };
 

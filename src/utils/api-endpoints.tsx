@@ -7,7 +7,8 @@ export const API_URL = {
     LOGIN: '/api/login/',
     REFRESH_TOKEN: '/api/token/refresh/',
     GET_USER_PERMISSIONS: '/api/permissions',
-    CREATE_EMPLOYEE: '/api/register',
+    CREATE_USER: '/api/create_account',
+    FETCH_ROLES: '/api/roles',
 }
 
 
@@ -15,10 +16,11 @@ export const API_URL = {
 export const APP_API_URL = {
 
     /***************** AUTH **********************/
-    LOGIN: '/api/login',
-    REFRESH_TOKEN: '/api/login/refresh',
-    GET_USER_PERMISSIONS: '/api/login/user-permissions',
-    CREATE_EMPLOYEE: '/api/employee',
+    LOGIN: '/api/auth',
+    REFRESH_TOKEN: '/api/auth/refresh',
+    GET_USER_PERMISSIONS: '/api/auth/user-permissions',
+    CREATE_USER: '/api/auth/register-user',
+    FETCH_ROLES: '/api/auth/fetch-roles',
    
 
 }
