@@ -164,7 +164,8 @@ const RegisterUser = () => {
                       component="div"
                       className="text-red text-xs"
                     />
-                    <select
+                    <Field
+                      as="select"
                       className="block border cursor-pointer rounded border-primary px-4 py-3 appearance-none focus:outline-none w-full"
                       placeholder="Role"
                       name="role"
@@ -175,7 +176,7 @@ const RegisterUser = () => {
                       {roles.map((role, index) => (
                         <option key={index} value="role1">{role.name}</option>
                       ))}
-                    </select>
+                    </Field>
                     <ErrorMessage
                       name="role"
                       component="div"
