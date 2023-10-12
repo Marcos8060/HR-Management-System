@@ -10,8 +10,7 @@ import { FormikValues, FormikHelpers } from "formik";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
-  const { loginUser, message } = useContext(authContext);
-  console.log("LOGIN_ERROR ", message);
+  const { loginUser } = useContext(authContext);
 
   const initialValues = {
     username: "",
@@ -72,7 +71,7 @@ const Login = () => {
               <section className="space-y-8">
                 <div className="space-y-2">
                   <Field
-                    className="block border-2 border-primary rounded-3xl w-full px-3 py-3 focus:outline-none border-gray-400"
+                    className="block border border-primary rounded w-full px-3 py-3 focus:outline-none border-gray-400"
                     placeholder="Enter Username"
                     type="text"
                     name="username"
@@ -85,7 +84,7 @@ const Login = () => {
                 </div>
                 <div className="space-y-2">
                   <Field
-                    className="block border-2 border-primary rounded-3xl w-full px-3 py-3 focus:outline-none border-gray-400"
+                    className="block border border-primary rounded w-full px-3 py-3 focus:outline-none border-gray-400"
                     placeholder="Enter Password"
                     type="password"
                     name="password"
@@ -98,11 +97,8 @@ const Login = () => {
                 </div>
               </section>
               <div className="flex items-center justify-center mt-4">
-                <button className="bg-primary rounded-3xl px-12 py-3 text-white w-full">
+                <button disabled={loading} className={`${loading ? 'bg-background text-primary rounded px-12 py-3 w-full' : 'bg-primary text-white rounded px-12 py-3 w-full'} `}>
                   Login
-                  {loading && (
-                        <span className="spinner-border animate-spin ml-1 spinner-border-sm"></span>
-                      )}
                 </button>
               </div>
             </Form>

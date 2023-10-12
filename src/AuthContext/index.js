@@ -6,6 +6,7 @@ import jwtDecode from "jwt-decode";
 import SimpleCrypto from "simple-crypto-js";
 import { useDispatch } from "react-redux";
 import { getAllUserPermissions } from "@/redux/features/auth";
+import { toast } from 'react-toastify'
 
 export const authContext = createContext();
 
@@ -44,6 +45,7 @@ export const AuthProvider = ({ children }) => {
         }
       }
     } catch (error) {
+      toast.error(error.response.data.detail)
       setMessage(error.response.data.detail);
     }
   };

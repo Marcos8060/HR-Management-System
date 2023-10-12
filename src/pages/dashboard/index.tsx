@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "@/components/Layout";
+import Layout from "../../components/layout";
 import { useAuth } from "@/assets/hooks/use-auth";
 import { Container, Grid } from "@mui/material";
 import { AiOutlineRight } from "react-icons/ai";
@@ -66,7 +66,6 @@ const GeneralDashboard = () => {
             </div>
           </section>
         </Grid>
-        
       </Grid>
     </Container>
   );

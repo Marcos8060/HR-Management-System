@@ -65,11 +65,10 @@ const RegisterUser = () => {
     formValue: FormikValues,
     helpers: FormikHelpers<any>
   ) => {
-    console.log("VALUES ",formValue)
     try {
       await registerUser(formValue).then(() => {
         helpers.resetForm();
-        toast.success("Registration successful");
+        toast.success("User Registered successfully");
       });
     } catch (err) {
       console.log("REGISTRATION_ERROR ", err);
