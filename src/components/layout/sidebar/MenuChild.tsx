@@ -65,7 +65,6 @@ const MenuChild = ({ collapsed, menu, index }:props) => {
                 className={`${currentPath === child.href ? 'bg-primary text-white p-2 rounded' : 'py-2'} flex items-center gap-2`}
                 href={child.href}
               >
-                <span className="text-sm">{child.icon}</span>{" "}
                 <span>{!collapsed && child.label}</span>
               </Link>
             </li>
