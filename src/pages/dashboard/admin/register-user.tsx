@@ -87,7 +87,7 @@ const RegisterUser = () => {
 
   return (
     <ProtectedRoute permission="CAN_REGISTER_USERS">
-    <div className="bg-background bg-opacity-60 backdrop-filter backdrop-blur-lg w-full mx-auto sm:px-12 px-4 py-4 h-[100vh] flex items-center justify-center relative">
+    <div className="bg-background w-full mx-auto sm:px-12 px-4 py-4 h-[100vh] flex items-center justify-center relative">
       <section className="w-full">
         <Link
           href="/dashboard/admin"
@@ -181,7 +181,7 @@ const RegisterUser = () => {
                           Assign Role
                         </option>
                         {roles.map((role, index) => (
-                          <option key={index} value="role1">
+                          <option key={index} value={role.name}>
                             {role.name}
                           </option>
                         ))}
