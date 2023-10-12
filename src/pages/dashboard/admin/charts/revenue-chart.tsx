@@ -41,7 +41,7 @@ const RevenueChart = () => {
     ],
   });
   return (
-    <section className="my-8">
+    <section className="my-8 shadow-2xl">
       <HighchartsReact highcharts={Highcharts} options={options} />
     </section>
   );

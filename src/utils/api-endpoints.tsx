@@ -9,6 +9,7 @@ export const API_URL = {
     GET_USER_PERMISSIONS: '/api/permissions',
     CREATE_USER: '/api/create_account',
     FETCH_ROLES: '/api/roles',
+    FETCH_PROJECTS: '/api/project',
 }
 
 
@@ -21,6 +22,7 @@ export const APP_API_URL = {
     GET_USER_PERMISSIONS: '/api/auth/user-permissions',
     CREATE_USER: '/api/auth/register-user',
     FETCH_ROLES: '/api/auth/fetch-roles',
+    FETCH_PROJECTS: '/api/projects',
    
 
 }

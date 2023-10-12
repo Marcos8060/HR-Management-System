@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
-import { MenuChild } from "./MenuChild";
+import MenuChild  from "./layout/sidebar/MenuChild";
 import { menus } from "@/assets/utils/menu";
 
 type Props = {
@@ -22,22 +21,22 @@ export const Drawer = ({ isOpen, setIsOpen,collapsed }: Props) => {
       >
         <section
           className={
-            "right-0 md:w-3/12 w-3/4 absolute bg-primary opacity-100 px-8 py-4 h-screen shadow-xl delay-400 duration-500 ease-in-out transition-all transform  " +
+            "right-0 md:w-2/12 w-3/4 absolute bg-white opacity-100 px-8 py-4 h-screen shadow-xl delay-400 duration-500 ease-in-out transition-all transform  " +
             (isOpen ? " translate-x-0 z-50 " : " translate-x-full ")
           }
         >
-          <article className=" text-white space-y-8">
+          <article className="space-y-8">
             <div className="flex items-center justify-start">
               <div>
                 <AiOutlineClose
                   onClick={() => setIsOpen(false)}
-                  className="text-white text-2xl float-right cursor-pointer"
+                  className="text-2xl float-right cursor-pointer"
                 />
               </div>
             </div>
             <div>
               <ul className="space-y-4 my-4">
-                {menus.map((menu, index) => (
+                {menus.map((menu: any, index: number) => (
                   <MenuChild key={index} {...{ index, menu,collapsed}} />
                 ))}
               </ul>

@@ -3,6 +3,6 @@ import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
     typography:{
-        fontFamily: "'Space Grotesk', sans-serif"
+        fontFamily: "'Inter', sans-serif"
     }
 })

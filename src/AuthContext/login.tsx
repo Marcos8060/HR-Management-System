@@ -9,22 +9,9 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import { FormikValues, FormikHelpers } from "formik";
 
 const Login = () => {
+  const [loading, setLoading] = useState(false);
   const { loginUser, message } = useContext(authContext);
   console.log("LOGIN_ERROR ", message);
-
-  // const formik = useFormik({
-  //   initialValues: {
-  //     username: "",
-  //     password: "",
-  //   },
-  //   validationSchema: validationSchema,
-  //   onSubmit: async (values, helpers) => {
-  //     try {
-  //       await loginUser(values.username, values.password);
-  //       helpers.resetForm();
-  //     } catch (error) {}
-  //   },
-  // });
 
   const initialValues = {
     username: "",
@@ -54,10 +41,11 @@ const Login = () => {
     formValue: FormikValues,
     helpers: FormikHelpers<any>
   ) => {
-    console.log("VALUES ", formValue);
     try {
+      setLoading(true);
       await loginUser(formValue.username, formValue.password).then(() => {
         helpers.resetForm();
+        setLoading(false);
       });
     } catch (err) {
       console.log("REGISTRATION_ERROR ", err);
@@ -66,61 +54,71 @@ const Login = () => {
 
   return (
     <>
-      <section className=" bg-background bg-opacity-60 backdrop-filter backdrop-blur-lg">
-        <article className="flex items-center justify-center h-screen">
-          <div className="md:block hidden mx-auto space-y-8 flex items-center justify-center px-4 w-1/2">
-            <img
-              className="rounded object-contain"
-              src="/images/rocket.png"
-              alt=""
-            />
+      <section className="flex gap-4 items-center justify-center h-screen py-4">
+        <div className="md:w-1/2 w-full sm:p-12 p-8 space-y-4">
+          <div className="space-y-2 text-center">
+            <h1 className="text-2xl">Welcome Back</h1>
+            <p className="text-xs text-primary">
+              If you forgot your password, please contact your system
+              administrator for a password reset
+            </p>
           </div>
-          <div className="space-y-4 w-1/2 flex items-center justify-center">
-            <Formik
-              initialValues={initialValues}
-              validationSchema={validationSchema}
-              onSubmit={handleLogin}
-            >
-              <Form className="space-y-4">
-                <section className="grid items-center justify-center space-y-4">
-                  <div>
-                    <Field
-                      className="block border-b w-full border-primary bg-background px-4 py-3 focus:outline-none"
-                      placeholder="username"
-                      name="username"
-                    />
-                    <ErrorMessage
-                        name="username"
-                        component="div"
-                        className="text-red text-xs"
-                      />
-                  </div>
-                  <div>
-                    <Field
-                      className="block border-b w-full border-primary bg-background px-4 py-3 focus:outline-none"
-                      placeholder="password"
-                      name="password"
-                    />
-                    <ErrorMessage
-                        name="password"
-                        component="div"
-                        className="text-red text-xs"
-                      />
-                  </div>
-                </section>
-                <button className="bg-primary shadow-2xl w-full rounded text-white px-4 py-3">
+          <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={handleLogin}
+          >
+            <Form className="space-y-8">
+              <section className="space-y-8">
+                <div className="space-y-2">
+                  <Field
+                    className="block border-2 border-primary rounded-3xl w-full px-3 py-3 focus:outline-none border-gray-400"
+                    placeholder="Enter Username"
+                    type="text"
+                    name="username"
+                  />
+                  <ErrorMessage
+                    name="username"
+                    component="div"
+                    className="text-red text-xs"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Field
+                    className="block border-2 border-primary rounded-3xl w-full px-3 py-3 focus:outline-none border-gray-400"
+                    placeholder="Enter Password"
+                    type="password"
+                    name="password"
+                  />
+                  <ErrorMessage
+                    name="password"
+                    component="div"
+                    className="text-red text-xs"
+                  />
+                </div>
+              </section>
+              <div className="flex items-center justify-center mt-4">
+                <button className="bg-primary rounded-3xl px-12 py-3 text-white w-full">
                   Login
+                  {loading && (
+                        <span className="spinner-border animate-spin ml-1 spinner-border-sm"></span>
+                      )}
                 </button>
-                <p className="text-center">
-                  Dont have an account yet?{" "}
-                  <Link href="/auth/register" className="text-link">
-                    Register
-                  </Link>
-                </p>
-              </Form>
-            </Formik>
-          </div>
-        </article>
+              </div>
+            </Form>
+          </Formik>
+        </div>
+        <div className="md:block hidden w-1/2 loginPage text-white">
+          <section className="flex items-center text-center justify-center h-screen">
+            <div>
+              <h1 className="text-4xl">Welcome Back</h1>
+              <p className="text-sm">
+                If you forgot your password, please contact your system
+                administrator for a password reset
+              </p>
+            </div>
+          </section>
+        </div>
       </section>
     </>
   );

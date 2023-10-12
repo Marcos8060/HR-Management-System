@@ -13,7 +13,7 @@
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #ffd831;
+  background: #146EB4;
 }
 ::-webkit-scrollbar-thumb {
   background: #888;
@@ -22,8 +22,8 @@
   background: #555;
 }
 
-.registerPage {
-  background: url("/images/signup.jpg");
+.loginPage {
+  background: url("/images/road.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,7 +31,7 @@
   z-index: 1;
   height: 100vh;
 }
-.registerPage::after {
+.loginPage::after {
   content: "";
   position: absolute;
   top: 0;

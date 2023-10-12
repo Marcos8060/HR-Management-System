@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect,useContext } from "react";
 import { AiOutlineMenu, AiOutlineDown,AiOutlineUp } from "react-icons/ai";
-import { Drawer } from "./Drawer";
+import { Drawer } from "../Drawer";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { authContext } from "@/AuthContext";
@@ -47,27 +47,23 @@ const Header = ({ collapsed }: props) => {
 
   return (
     <>
-      <section className="flex justify-end sm:px-8 px-2 py-4 sticky top-0 z-50 shadow-xl bg-white md:bg-opacity-30 md:backdrop-filter md:backdrop-blur-lg">
-        {/* <div className="">
-          <h1 className="text-xl">HR Management System</h1>
-        </div> */}
-
-        <div className="flex items-center gap-4">
+      <section className="flex justify-end sm:px-8 px-2 py-3 sticky top-0 shadow-xl bg-primary">
+        <div className="flex items-center justify-between gap-4">
           <div className="md:hidden block">
             <AiOutlineMenu
-              className="text-2xl cursor-pointer"
+              className="text-2xl text-white cursor-pointer"
               onClick={() => setIsOpen(true)}
             />
             <Drawer {...{ isOpen, setIsOpen, collapsed }} />
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <img
-              className="w-10 h-10 rounded-full cursor-pointer"
+              className="w-8 h-8 rounded-full cursor-pointer"
               src="/images/me.png"
               alt=""
             />
-            <p>{user?.username}</p>
-            <AiOutlineDown className="cursor-pointer" onClick={handleClick} />
+            <p className="text-white">{user?.username}</p>
+            <AiOutlineDown className="cursor-pointer text-white" onClick={handleClick} />
           </div>
           <Menu
             id="basic-menu"

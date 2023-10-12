@@ -81,7 +81,7 @@ const Statistics = () => {
             </section>
           </section>
           <div>
-            <button className="bg-primary rounded text-white px-4 py-2 w-full my-2">Load More</button>
+            <button className="bg-cardSecondary rounded text-white px-4 py-2 w-full my-2">Load More</button>
           </div>
         </section>
       </Grid>

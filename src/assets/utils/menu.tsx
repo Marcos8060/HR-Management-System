@@ -1,100 +1,82 @@
 // components/defaultNavItems.tsx
 import React from "react";
-import {
-  CalendarIcon,
-  FolderIcon,
-  HomeIcon,
-  UserGroupIcon,
-  UserIcon
-} from "@heroicons/react/24/outline";
+import { BiSolidDashboard } from 'react-icons/bi';
+import { FaUsers } from 'react-icons/fa'
+import { AiFillProject } from 'react-icons/ai'
+import { SlCalender } from 'react-icons/sl'
 
 
 export const menus = [
   {
     label: "Dashboard",
     href: "/",
-    icon: <HomeIcon className="w-6 h-6" />,
+    icon: <BiSolidDashboard />,
     children: [
       {
         label: "Admin Dashboard",
         href: "/dashboard/admin",
-        icon: <UserGroupIcon className="w-6 h-6" />,
-        permission: 'ACCESS_ADMIN_DASHBOARD'
       },
       {
         label: "Employee Dashboard",
         href: "/dashboard/employee",
-        icon: <UserGroupIcon className="w-6 h-6" />,
-        permission: 'ACCESS_EMPLOYEE_DASHBOARD'
       },
     ],
   },
   {
     label: "Employees",
     href: "/sector",
-    icon: <UserIcon className="w-6 h-6" />,
+    icon: <FaUsers />,
     children: [
       {
         label: "All Employees",
         href: "/dashboard/employee/all-employees",
-        icon: <UserGroupIcon className="w-6 h-6" />,
-        permission: 'ACCESS_EMPLOYEES'
       },
       {
         label: "Holidays",
         href: "/dashboard/sector/health",
-        icon: <UserGroupIcon className="w-6 h-6" />,
       },
       {
         label: "Leaves (Admin)",
         href: "/dashboard/sector/health",
-        icon: <UserGroupIcon className="w-6 h-6" />,
       },
       {
         label: "Leaves (Employee)",
         href: "/dashboard/sector/health",
-        icon: <UserGroupIcon className="w-6 h-6" />,
-
       },
       {
         label: "Departments",
         href: "/dashboard/sector/agriculture",
-        icon: <UserGroupIcon className="w-6 h-6" />,
       },
     ],
   },
   {
     label: "Clients",
-    href: "/calendar",
-    icon: <UserGroupIcon className="w-6 h-6" />,
-    permission: 'ACCESS_CLIENTS'
+    href: "/dashboard/clients",
+    icon: <FaUsers />,
   },
   {
     label: "Projects",
     href: "/projects",
-    icon: <FolderIcon className="w-6 h-6" />,
+    icon: <AiFillProject className="w-4 h-4" />,
     children: [
       {
         label: "All Projects",
         href: "/dashboard/projects",
-        icon: <UserGroupIcon className="w-6 h-6" />,
       },
       {
         label: "Approved Projects",
         href: "/dashboard/projects/approved-projects",
-        icon: <UserGroupIcon className="w-6 h-6" />,
       },
       {
         label: "Pending Projects",
         href: "/dashboard/users/approved-users",
-        icon: <UserGroupIcon className="w-6 h-6" />,
       },
     ],
   },
   {
     label: "Calendar",
-    href: "/calendar",
-    icon: <CalendarIcon className="w-6 h-6" />,
+    href: "/dashboard/calender",
+    icon: <SlCalender />,
   },
 ];
 
@@ -104,21 +86,19 @@ export const dashboardData = [
   {
     label: 'Projects',
     number: 12,
-    icon: <HomeIcon className="w-6 h-8" />
-  },
-  {
-    label: 'Clients',
-    number: 44,
-    icon: <HomeIcon className="w-6 h-8" />
+    approved: 49,
+    // icon: <HomeIcon className="w-4 h-8" />
   },
   {
     label: 'Tasks',
     number: 37,
-    icon: <HomeIcon className="w-6 h-8" />
+    approved: 23,
+    // icon: <HomeIcon className="w-4 h-8" />
   },
   {
     label: 'Employees',
     number: 218,
-    icon: <HomeIcon className="w-6 h-8" />
+    approved: 49,
+    // icon: <HomeIcon className="w-4 h-8" />
   }
 ]

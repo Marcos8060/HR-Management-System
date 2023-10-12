@@ -8,16 +8,17 @@ const config: Config = {
   ],
   theme: {
     colors:{
-      primary: '#272684',
+      primary: '#1E2640',
+      cardSecondary: '#0E4F82',
+      card: '#146EB4',
       white: '#FFFFFF',
       hover: '#2C5BCD',
       black: '#000000',
-      background: '#DFEAF0',
-      yellow: '#FFD831',
+      background: '#F2F2F6',
       surface: '#DFEAF0',
       link: '#0D6EFD',
       red: '#D32F2F',
-    }
+    },
   },
   plugins: [],
 }

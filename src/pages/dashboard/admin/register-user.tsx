@@ -16,9 +16,7 @@ type Roles = {
   name: string;
 };
 
-type Dispatch = {
-  dispatch: React.ReactNode;
-};
+
 
 const RegisterUser = () => {
   const { roles } = useSelector(
