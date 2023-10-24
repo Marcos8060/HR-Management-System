@@ -18,6 +18,8 @@ const config: Config = {
       surface: '#DFEAF0',
       link: '#0D6EFD',
       red: '#D32F2F',
+      warning: '#FF3333',
+      gray: '#CCCCCC'
     },
   },
   plugins: [],

@@ -7,7 +7,7 @@ const Clients = () => {
   )
 }
 
-Clients.getLayout = (page: React.ReactNode) => (
+Clients.getLayout = (page) => (
     <Layout>{page}</Layout>
 )
 

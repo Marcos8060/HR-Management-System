@@ -10,6 +10,11 @@ export const API_URL = {
     CREATE_USER: '/api/create_account',
     FETCH_ROLES: '/api/roles',
     FETCH_PROJECTS: '/api/project',
+
+
+    /***************** CLIENT APIS **********************/
+    FETCH_CLIENTS: '/api/clients',
+
 }
 
 
@@ -23,6 +28,9 @@ export const APP_API_URL = {
     CREATE_USER: '/api/auth/register-user',
     FETCH_ROLES: '/api/auth/fetch-roles',
     FETCH_PROJECTS: '/api/projects',
+
+      /***************** CLIENT APIS **********************/
+      FETCH_CLIENTS: '/api/clients',
    
 
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { Column, Item, SearchPanel, Toolbar } from "devextreme-react/data-grid";
+import AddProjectModal from './add-project-modal'
 
 const DataGrid = dynamic(() => import("devextreme-react/data-grid"), {
   ssr: false,
@@ -27,6 +28,7 @@ const ProjectsDataGrid = () => {
   ];
   return (
     <section>
+      <AddProjectModal />
       <DataGrid
         dataSource={users}
         allowColumnReordering={true}

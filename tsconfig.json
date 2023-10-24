@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/AuthContext/index.js", "src/pages/api/auth/user-permissions.js", "src/redux/services/auth/index.js", "src/redux/services/employee/index.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/AuthContext/index.js", "src/pages/api/auth/user-permissions.js", "src/redux/services/auth/index.js", "src/redux/services/employee/index.js", "src/components/dashboard/projects/add-project-modal.js", "src/pages/dashboard/clients/index.js"],
   "exclude": ["node_modules"]
 }
